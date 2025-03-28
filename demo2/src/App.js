@@ -1,13 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react'
 
 function App() {
+  const [time, setTime] = useState(new Date());
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          My Demo2 React App..
         </p>
         <a
           className="App-link"
@@ -15,7 +17,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          {time.toLocaleTimeString()}
         </a>
       </header>
     </div>
